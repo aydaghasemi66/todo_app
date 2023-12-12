@@ -12,7 +12,7 @@ class LoginView(FormView):
      def form_valid(self, form):
          email = self.request.POST.get('email')
          password = self.request.POST.get('password')
-         user = authenticate(email=email)
+         user = authenticate(email=email, password=password)
          if user is not None:
               login(self.request, user)
               return super().form_valid(form)
