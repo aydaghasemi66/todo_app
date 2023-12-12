@@ -1,0 +1,18 @@
+{% extends "base_auth.html" %}
+{% block title %}Login{% endblock title %}Login 
+{% block content %}
+<form class="login100-form validate-form" method="post">
+    {% csrf_token %}
+    <span class="login100-form-title">
+        Are you sure you want to delete tasks?
+    </span>
+    <div class="container-login100-form-btn">
+        <button class="login100-form-btn">
+            Delete Task
+        </button>
+    </div>
+</form>
+</div>
+</div>
+</div>
+{% endblock content %}
