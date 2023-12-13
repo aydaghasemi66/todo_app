@@ -27,7 +27,7 @@ class LogOutView(TemplateView):
 
 
 class SignUpView(CreateView):
-     template_name = 'registrations/signup.html'
+     template_name = 'registration/signup.html'
      form_class = CustomUserCreation
      success_url = '/accounts/login/'
      

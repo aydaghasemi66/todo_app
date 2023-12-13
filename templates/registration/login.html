@@ -1,6 +1,8 @@
 {% extends "base_auth.html" %}
 {% block title %}Login{% endblock title %}Login 
 {% block content %}
+
+
 <form class="login100-form validate-form" method="post">
     {% csrf_token %}
     <span class="login100-form-title">
@@ -39,7 +41,7 @@
     </div>
 
     <div class="text-center p-t-136">
-        <a class="txt2" href="#">
+        <a class="txt2" href="{% url "accounts:signup" %}">
             Create your Account
             <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
         </a>
