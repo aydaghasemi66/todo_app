@@ -24,10 +24,10 @@ class HomeView(LoginRequiredMixin, ListView):
             return redirect('/')
 
 
-class DeleteTask(DeleteView):
+class DeleteTask(LoginRequiredMixin, DeleteView):
     template_name = 'todo/task_confirm_delete.html'
     model = Task
-    success_url = 'todo:home'
+    success_url = '/'
 
 
 class CompleteTask(View):
